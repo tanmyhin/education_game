@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Mastermind - ผู้พิชิตโครงงาน</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>Project Mastermind</h1>
+        <p class="subtitle">ผู้พิชิตโครงงานด้วยแนวคิดเชิงคำนวณ</p>
+
+        <div class="status-bars">
+            <div class="status">
+                <label>ความก้าวหน้าโครงการ</label>
+                <div class="bar-background">
+                    <div id="progress-bar" class="bar-fill"></div>
+                </div>
+                <span id="progress-text">0%</span>
+            </div>
+            <div class="status">
+                <label>ขวัญกำลังใจทีม</label>
+                <div class="bar-background">
+                    <div id="morale-bar" class="bar-fill"></div>
+                </div>
+                <span id="morale-text">50%</span>
+            </div>
+        </div>
+
+        <div id="game-area">
+            <div id="start-container">
+                <h2>ยินดีต้อนรับสู่ Project Mastermind!</h2>
+                <p>กรุณากรอกชื่อของคุณเพื่อเริ่มต้นภารกิจพิชิตโครงงาน</p>
+                <input type="text" id="player-name-input" placeholder="ชื่อผู้เล่น">
+                <button id="start-game-button">เริ่มเกม</button>
+            </div>
+            
+            <div id="scenario-container" class="hidden">
+                <h2 id="scenario-week"></h2>
+                <p id="scenario-text"></p>
+                <div id="choices-container"></div>
+            </div>
+
+            <div id="feedback-container" class="hidden">
+                <h3 id="feedback-title"></h3>
+                <p id="feedback-text"></p>
+                <p id="feedback-principle"></p>
+                <button id="next-button">ไปต่อ</button>
+            </div>
+
+            <div id="game-over-container" class="hidden">
+                <h2 id="game-over-title"></h2>
+                <p id="game-over-summary"></p>
+                <button id="restart-button">เล่นอีกครั้ง</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
